@@ -1,11 +1,11 @@
 import React from "react";
-import React from "react";
 import {
   FontAwesome,
   MaterialIcons,
   MaterialCommunityIcons
 } from "@expo/vector-icons";
 import { white } from "./colors";
+import { View } from 'react-native';
 
 export function getMetricMetaInfo(metric) {
   const info = {
