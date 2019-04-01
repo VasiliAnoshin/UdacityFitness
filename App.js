@@ -2,13 +2,18 @@ import React, {Component} from 'react';
 import { View } from 'react-native';
 import {getMetricMetaInfo} from './utils/helpers'
 import AddEntry from './components/AddEntry'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import reducer from './reducers'
 
 export default class App extends React.Component {
   render() {
     return (
-      <View >
+      <Provider store={createStore(reducer)}>
+        <View>
           <AddEntry />
-      </View>
+        </View>
+      </Provider>
     );
   }
 }
