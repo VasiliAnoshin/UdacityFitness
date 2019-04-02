@@ -7,6 +7,12 @@ import {
 import { white , black } from "./colors";
 import { View } from 'react-native';
 
+export function getDailyReminderValue () {
+  return {
+    today: "👋 Don't forget to log your data today!"
+  }
+}
+
 export function getMetricMetaInfo(metric) {
   const info = {
     run: {
