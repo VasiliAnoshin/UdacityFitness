@@ -9,6 +9,26 @@ import { purple, white } from './utils/colors'
 import { FontAwesome, Ionicons } from '@expo/vector-icons'
 import { Constants } from 'expo'
 import TabNav from './components/TabNav';
+import { createStackNavigator,createAppContainer  } from 'react-navigation'
+import EntryDetail from './components/EntryDetail'
+
+const MainNavigator = createAppContainer(createStackNavigator({
+  home: {
+    screen: TabNav,
+    navigationOptions: {
+      header: null,
+    },
+  },
+  EntryDetail: {
+    screen: EntryDetail,
+    navigationOptions: ({ navigation }) => ({
+      headerTintColor: white,
+      headerStyle: {
+        backgroundColor: purple,
+      },
+    }),
+  },
+}));
 
 function UdaciStatusBar ({backgroundColor, ...props}) {
   return (
@@ -24,7 +44,7 @@ export default class App extends React.Component {
       <Provider store={createStore(reducer)}>
         <View style={{flex: 1}}>
           <UdaciStatusBar backgroundColor={purple} barStyle="light-content" />
-          <TabNav />
+          <MainNavigator />
         </View>
       </Provider>
     )
