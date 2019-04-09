@@ -11,6 +11,8 @@ import { Constants } from 'expo'
 import TabNav from './components/TabNav';
 import { createStackNavigator,createAppContainer  } from 'react-navigation'
 import EntryDetail from './components/EntryDetail'
+import { setLocalNotification } from './utils/helpers'
+
 
 const MainNavigator = createAppContainer(createStackNavigator({
   home: {
@@ -39,6 +41,9 @@ function UdaciStatusBar ({backgroundColor, ...props}) {
 }
 
 export default class App extends React.Component {
+  componentDidMount() {
+    setLocalNotification()
+  }
   render() {
     return (
       <Provider store={createStore(reducer)}>
