@@ -11,6 +11,7 @@ import { Constants } from 'expo'
 import TabNav from './components/TabNav';
 import { createStackNavigator,createAppContainer  } from 'react-navigation'
 import EntryDetail from './components/EntryDetail'
+import Live from './components/Live'
 
 const MainNavigator = createAppContainer(createStackNavigator({
   home: {

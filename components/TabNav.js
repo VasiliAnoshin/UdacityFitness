@@ -23,6 +23,13 @@ const router = {
         Platform.OS === 'ios' && <FontAwesome name="plus-square" size={30} color={tintColor} />,
     },
   },
+   Live: {
+    screen: Live,
+    navigationOptions: {
+      tabBarLabel: 'Live',
+      tabBarIcon: ({ tintColor }) => <Ionicons name='ios-speedometer' size={30} color={tintColor} />
+    }
+  }
 };
 
 const navigationOptions = {
