@@ -2,6 +2,7 @@ import React from 'react';
 import { createBottomTabNavigator, createAppContainer, createMaterialTopTabNavigator } from 'react-navigation';
 import AddEntry from './AddEntry';
 import History from './History';
+import Live from './Live'
 import { Platform } from 'react-native';
 import { purple, white } from '../utils/colors';
 import { FontAwesome, Ionicons } from '@expo/vector-icons';
